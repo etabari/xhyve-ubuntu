@@ -8,8 +8,8 @@ if [ "$(whoami)" != "root" ]; then
     exit 1
 fi
 
-memgb=2
-cpus=1
+memgb=8
+cpus=2
 
 /usr/local/bin/xhyve \
     -A \

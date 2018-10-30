@@ -15,7 +15,7 @@ fi
 
 storagegb=16
 memgb=2
-cpus=1
+cpus=2
 MB=$[1024*1024]
 GB=$[1024*$MB]
 
@@ -31,4 +31,4 @@ xhyve \
     -s 4,virtio-blk,storage.img \
     -s 31,lpc \
     -l com1,stdio \
-    -f "kexec,boot/vmlinuz,boot/initrd.gz,earlyprintk=serial console=ttyS0"
+    -f kexec,'boot/vmlinuz','boot/initrd.gz','earlyprintk=serial console=ttyS0'
